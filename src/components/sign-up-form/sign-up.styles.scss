@@ -1,0 +1,15 @@
+.sign-up-container {
+  display: flex;
+  padding: 1rem;
+  text-align: center;
+  flex-direction: column;
+  width: 420px;
+  h2 {
+    margin: 10px 0;
+  }
+  .buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

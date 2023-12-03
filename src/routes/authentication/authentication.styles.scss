@@ -1,0 +1,10 @@
+.auth-container {
+  margin: 0 3rem 0 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  @media (max-width: 450px) {
+    margin: 0;
+  }
+}

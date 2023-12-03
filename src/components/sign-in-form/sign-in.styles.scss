@@ -1,0 +1,28 @@
+.sign-in-container {
+  display: flex;
+  padding: 1rem;
+  text-align: center;
+  flex-direction: column;
+  width: 420px;
+  h2 {
+    margin: 10px 0;
+  }
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (max-width: 410px) {
+    .buttons-container {
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .button-container {
+      margin-bottom: 1rem;
+    }
+  }
+}
