@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../directory/directory.styles.scss";
 import CategoryItem from "../category-item/categoryItem.component";
 

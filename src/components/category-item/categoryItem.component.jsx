@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../category-item/categoryItem.styles.scss";
 
 const CategoryItem = ({ category }) => {
