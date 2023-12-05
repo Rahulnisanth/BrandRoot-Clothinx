@@ -20,13 +20,14 @@ const firebaseConfig = {
 const firebaseapp = initializeApp(firebaseConfig);
 
 const provider = new GoogleAuthProvider();
+provider.setCustomParameters({ prompt: "select_account" });
 export const auth = getAuth();
 //Google Popup Configs ------>
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
 
 //Fire base Configs ----->
 export const db = getFirestore();
-export const CreateUserDoc = async (userAuth, additionalInfo) => {
+export const CreateUserDoc = async (userAuth, additionalInfo = {}) => {
   if (!userAuth) return;
   const userDoc = doc(db, "users", userAuth.uid);
   const userSnapshot = await getDoc(userDoc);
