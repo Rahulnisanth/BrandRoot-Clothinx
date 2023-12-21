@@ -28,10 +28,7 @@ const SignIn = () => {
   };
 
   const loginWithGoogle = async () => {
-    const { user } = await signInWithGooglePopup();
-    await CreateUserDoc(user);
-    // setCurrentUser(user);
-    console.log(user);
+    await signInWithGooglePopup();
   };
   //SubmitHandler :
   const handleSubmit = async (event) => {

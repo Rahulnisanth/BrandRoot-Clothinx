@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 import { useState, createContext, useEffect } from "react";
-import { onAuthStateListener } from "../utils/firebase/firebase.utils";
+import {
+  onAuthStateListener,
+  CreateUserDoc,
+} from "../utils/firebase/firebase.utils";
 
 export const UserContext = createContext({
   currentUser: null,
@@ -13,6 +16,9 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateListener((user) => {
       console.log(user);
+      if (user) {
+        CreateUserDoc(user);
+      }
       setCurrentUser(user);
     });
     return unsubscribe;
