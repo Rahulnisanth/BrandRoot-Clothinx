@@ -1,11 +1,15 @@
-import "./cart-item.style.scss";
+/* eslint-disable react/prop-types */
+import "./cart-item.styles.scss";
 
-const CartItem = (cartItems) => {
-  const { name, quantity } = cartItems;
+const CartItem = ({ cartItem }) => {
+  const { name, quantity } = cartItem;
+
   return (
-    <div>
-      <h1>{name}</h1>
-      <span>{quantity}</span>
+    <div className="cart-item-container">
+      <div className="item-details">
+        <span className="name">{name}</span>
+        <span className="price">{quantity}</span>
+      </div>
     </div>
   );
 };
