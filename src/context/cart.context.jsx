@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const addCartItem = (cartItems, productToAdd) => {
   const existingCartItem = cartItems.find(
@@ -22,17 +22,33 @@ export const CartContext = createContext({
   setCartOpen: () => {},
   cartItems: [],
   addItemsToCart: () => {},
+  cartCount: 0,
 });
 
 export const CartProvider = ({ children }) => {
   const [isCartOpen, setCartOpen] = useState(false);
   const [cartItems, setCartItems] = useState([]);
 
+  const [cartCount, setCartCount] = useState(0);
+  useEffect(() => {
+    const newCartCount = cartItems.reduce(
+      (total, cartItems) => total + cartItems.quantity,
+      0
+    );
+    setCartCount(newCartCount);
+  }, [cartItems]);
+
   const addItemsToCart = (product) => {
     setCartItems(addCartItem(cartItems, product));
   };
 
-  const value = { isCartOpen, setCartOpen, cartItems, addItemsToCart };
+  const value = {
+    isCartOpen,
+    setCartOpen,
+    cartItems,
+    addItemsToCart,
+    cartCount,
+  };
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
