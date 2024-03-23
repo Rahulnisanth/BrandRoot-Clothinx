@@ -1,7 +1,11 @@
+/* eslint-disable react/prop-types */
+import { useNavigate } from "react-router-dom";
 import "./directory-item.styles.scss";
 
 const DirectoryItem = ({ category }) => {
-  const { imageUrl, title } = category;
+  const { imageUrl, title, routeLink } = category;
+  const navigate = useNavigate();
+  const navigateHandler = () => navigate(routeLink);
   return (
     <div className="directory-item-container">
       <div
@@ -10,7 +14,7 @@ const DirectoryItem = ({ category }) => {
           backgroundImage: `url(${imageUrl})`,
         }}
       />
-      <div className="body">
+      <div onClick={navigateHandler} className="body">
         <h2>{title}</h2>
         <p>Shop Now</p>
       </div>
