@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
-import PRODUCTS from "../shop-data.json";
+import { createContext, useState, useEffect } from "react";
+import { addCollectionsandDocs } from "../utils/firebase/firebase.utils.js";
+import SHOP_DATA from "../shop-data.js";
 
 export const ProductsContext = createContext({
   products: [],
@@ -8,7 +9,10 @@ export const ProductsContext = createContext({
 
 export const ProductsProvider = ({ children }) => {
   // eslint-disable-next-line no-unused-vars
-  const [products, setProducts] = useState(PRODUCTS);
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    addCollectionsandDocs("categories", SHOP_DATA);
+  }, []);
   const value = { products };
   return (
     <ProductsContext.Provider value={value}>
