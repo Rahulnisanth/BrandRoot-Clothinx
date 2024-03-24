@@ -28,4 +28,25 @@
     margin-left: auto;
     font-size: 36px;
   }
+
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+    margin-top: 20px;
+
+    .checkout-header {
+      display: none;
+
+      .header-block {
+        width: 50%;
+
+        &:last-child {
+          width: 50%;
+        }
+      }
+    }
+
+    .total {
+      font-size: 24px;
+    }
+  }
 }

@@ -39,3 +39,17 @@
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .checkout-item-container {
+    font-size: 12px;
+    .quantity {
+      margin-left: 12px;
+    }
+    .remove-button {
+      padding-left: 0;
+      margin-left: -0.5rem;
+      cursor: pointer;
+    }
+  }
+}

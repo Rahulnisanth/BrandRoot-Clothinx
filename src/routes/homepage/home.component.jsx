@@ -17,7 +17,7 @@ const Home = () => {
     },
     {
       id: 3,
-      title: "Sneakers",
+      title: "Shoes",
       imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
       routeLink: "shop/sneakers",
     },

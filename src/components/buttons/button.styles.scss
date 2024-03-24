@@ -1,15 +1,14 @@
 .button-container {
   min-width: 165px;
-  width: auto;
   height: 50px;
   letter-spacing: 0.5px;
   line-height: 50px;
   padding: 0 35px 0 35px;
-  font-size: 15px;
+  font-size: 9px;
   background-color: black;
   color: white;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed';
+  font-family: "Open Sans Condensed";
   font-weight: bolder;
   border: none;
   cursor: pointer;
@@ -23,6 +22,7 @@
   }
 
   &.google-sign-in {
+    margin-top: 1rem;
     background-color: #4285f4;
     color: white;
 
@@ -42,5 +42,13 @@
       color: white;
       border: none;
     }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .button-container {
+    min-width: 66px;
+    letter-spacing: 0;
+    font-size: 8px;
   }
 }

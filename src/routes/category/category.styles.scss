@@ -3,10 +3,19 @@
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 50px;
+
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 30px;
+  }
 }
 
 .category-title {
   font-size: 38px;
   margin-bottom: 25px;
   text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 28px;
+  }
 }

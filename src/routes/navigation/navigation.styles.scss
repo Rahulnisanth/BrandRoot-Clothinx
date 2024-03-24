@@ -8,11 +8,13 @@
   .logo-container {
     height: 100%;
     width: 70px;
-    padding: 25px;
+    padding-top: 25px;
+    padding-left: 10px;
   }
 
   .nav-links-container {
-    width: 50%;
+    width: 70%;
+    padding-top: 1.5rem;
     height: 100%;
     display: flex;
     align-items: center;
@@ -21,21 +23,6 @@
     .nav-link {
       padding: 10px 15px;
       cursor: pointer;
-    }
-  }
-
-  @media only screen and (max-width: 767px) {
-    flex-direction: column;
-    align-items: center;
-
-    .logo-container,
-    .nav-links-container {
-      width: 100%;
-      justify-content: center;
-    }
-
-    .nav-link {
-      padding: 10px 0;
     }
   }
 }
