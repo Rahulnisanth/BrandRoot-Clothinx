@@ -1,7 +1,7 @@
 .button-container {
-  min-width: 165px;
+  min-width: 130px;
   height: 50px;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
@@ -13,7 +13,7 @@
   border: none;
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 
   &:hover {
     background-color: white;
@@ -46,8 +46,16 @@
 
 @media only screen and (max-width: 767px) {
   .button-container {
-    min-width: 66px;
+    display: flex;
+    justify-content: space-between !important;
+    min-width: 60px;
     letter-spacing: 0;
-    font-size: 8px;
+  }
+  .inverted {
+    letter-spacing: 3px;
+    font-size: 10px !important;
+  }
+  .undefined {
+    letter-spacing: 5px;
   }
 }

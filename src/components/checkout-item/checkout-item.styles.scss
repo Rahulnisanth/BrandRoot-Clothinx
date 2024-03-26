@@ -42,14 +42,17 @@
 
 @media only screen and (max-width: 767px) {
   .checkout-item-container {
-    font-size: 12px;
+    font-size: 12px !important;
     .quantity {
-      margin-left: 12px;
+      margin-left: -2px;
     }
     .remove-button {
       padding-left: 0;
       margin-left: -0.5rem;
       cursor: pointer;
     }
+  }
+  .total {
+    font-size: 12px !important;
   }
 }

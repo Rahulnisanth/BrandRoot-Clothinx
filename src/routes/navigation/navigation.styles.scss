@@ -21,8 +21,14 @@
     justify-content: flex-end;
 
     .nav-link {
+      margin-top: 5px;
       padding: 10px 15px;
       cursor: pointer;
+    }
+    @media only screen and (max-width: 767px) {
+      .nav-link {
+        font-size: 12px;
+      }
     }
   }
 }

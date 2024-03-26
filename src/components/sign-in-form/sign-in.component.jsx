@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   signInAuthUserWithEmailAndPassword,
   signInWithGooglePopup,
-  CreateUserDoc,
 } from "../../utils/firebase/firebase.utils";
 
 import FormInput from "../form-input/form-input.component";
@@ -57,7 +56,7 @@ const SignIn = () => {
 
   return (
     <div className="sign-in-container">
-      <h2>Already have an account ?</h2>
+      <h2>Already have account ?</h2>
       <span>Sign in with email and password</span>
       <form onSubmit={handleSubmit}>
         <FormInput

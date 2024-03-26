@@ -56,11 +56,14 @@
         margin-top: 10px;
       }
       .footer {
-        width: 100%;
+        width: 90%;
         height: 5%;
         display: flex;
         justify-content: space-between;
-        font-size: 8px;
+      }
+      .name,
+      .price {
+        font-size: 12px;
       }
     }
   }

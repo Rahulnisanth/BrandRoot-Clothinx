@@ -11,7 +11,7 @@ const Home = () => {
     },
     {
       id: 2,
-      title: "Jackets",
+      title: "Jacket",
       imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
       routeLink: "shop/jackets",
     },
@@ -23,15 +23,15 @@ const Home = () => {
     },
     {
       id: 4,
-      title: "Women",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-      routeLink: "shop/womens",
-    },
-    {
-      id: 5,
       title: "Men",
       imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
       routeLink: "shop/mens",
+    },
+    {
+      id: 5,
+      title: "Women",
+      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+      routeLink: "shop/womens",
     },
   ];
   return (
