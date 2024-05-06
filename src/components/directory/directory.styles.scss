@@ -1,6 +1,15 @@
 .directory-container {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin-top: 4rem;
+  .hero--container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 750px) {
+  .directory-container {
+    margin-top: 2rem;
+  }
 }

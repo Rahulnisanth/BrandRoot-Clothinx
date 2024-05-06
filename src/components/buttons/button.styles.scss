@@ -1,9 +1,9 @@
 .button-container {
+  text-align: center;
   min-width: 130px;
   height: 50px;
   letter-spacing: 1px;
   line-height: 50px;
-  padding: 0 35px 0 35px;
   font-size: 15px;
   background-color: black;
   color: white;
@@ -12,8 +12,6 @@
   font-weight: bolder;
   border: none;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
 
   &:hover {
     background-color: white;
@@ -46,16 +44,19 @@
 
 @media only screen and (max-width: 767px) {
   .button-container {
-    display: flex;
+    display: block;
     justify-content: space-between !important;
-    min-width: 60px;
+    // min-width: 60px;
     letter-spacing: 0;
+    &.google-sign-in {
+      margin-left: 1rem;
+    }
   }
   .inverted {
     letter-spacing: 3px;
     font-size: 10px !important;
   }
   .undefined {
-    letter-spacing: 5px;
+    letter-spacing: 3px;
   }
 }
